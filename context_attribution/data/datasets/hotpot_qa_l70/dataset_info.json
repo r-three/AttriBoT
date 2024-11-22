@@ -1,0 +1,120 @@
+{
+  "builder_name": "hotpot_qa",
+  "citation": "\n@inproceedings{yang2018hotpotqa,\n  title={{HotpotQA}: A Dataset for Diverse, Explainable Multi-hop Question Answering},\n  author={Yang, Zhilin and Qi, Peng and Zhang, Saizheng and Bengio, Yoshua and Cohen, William W. and Salakhutdinov, Ruslan and Manning, Christopher D.},\n  booktitle={Conference on Empirical Methods in Natural Language Processing ({EMNLP})},\n  year={2018}\n}\n",
+  "config_name": "distractor",
+  "dataset_name": "hotpot_qa",
+  "dataset_size": 598664854,
+  "description": "HotpotQA is a new dataset with 113k Wikipedia-based question-answer pairs with four key features:\n(1) the questions require finding and reasoning over multiple supporting documents to answer;\n(2) the questions are diverse and not constrained to any pre-existing knowledge bases or knowledge schemas;\n(3) we provide sentence-level supporting facts required for reasoning, allowingQA systems to reason with strong supervisionand explain the predictions;\n(4) we offer a new type of factoid comparison questions to testQA systems\u2019 ability to extract relevant facts and perform necessary comparison.\n",
+  "download_checksums": {
+    "http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_train_v1.1.json": {
+      "num_bytes": 566426227,
+      "checksum": null
+    },
+    "http://curtis.ml.cmu.edu/datasets/hotpot/hotpot_dev_distractor_v1.json": {
+      "num_bytes": 46320117,
+      "checksum": null
+    }
+  },
+  "download_size": 612746344,
+  "features": {
+    "id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "question": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "answer": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "context_tree": {
+      "children": [
+        {
+          "children": [
+            {
+              "children": {
+                "feature": {
+                  "dtype": "null",
+                  "_type": "Value"
+                },
+                "_type": "Sequence"
+              },
+              "data": {
+                "ground_truth": {
+                  "dtype": "bool",
+                  "_type": "Value"
+                },
+                "separator": {
+                  "dtype": "string",
+                  "_type": "Value"
+                },
+                "text": {
+                  "dtype": "string",
+                  "_type": "Value"
+                }
+              }
+            }
+          ],
+          "data": {
+            "separator": {
+              "dtype": "string",
+              "_type": "Value"
+            },
+            "title": {
+              "dtype": "string",
+              "_type": "Value"
+            }
+          }
+        }
+      ],
+      "data": {}
+    },
+    "response_ids": {
+      "feature": {
+        "feature": {
+          "dtype": "int64",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "_type": "Sequence"
+    },
+    "response": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "prompt_template": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "https://hotpotqa.github.io/",
+  "license": "",
+  "size_in_bytes": 1211411198,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 552948795,
+      "num_examples": 90447,
+      "shard_lengths": [
+        82000,
+        8447
+      ],
+      "dataset_name": "hotpot_qa"
+    },
+    "validation": {
+      "name": "validation",
+      "num_bytes": 45716059,
+      "num_examples": 7405,
+      "dataset_name": "hotpot_qa"
+    }
+  },
+  "version": {
+    "version_str": "1.0.0",
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}
