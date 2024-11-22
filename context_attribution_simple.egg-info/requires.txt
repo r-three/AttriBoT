@@ -1,0 +1,9 @@
+datasets
+transformers
+torch
+numpy
+tqdm
+nltk
+jsonlines
+accelerate
+sentence_transformers
