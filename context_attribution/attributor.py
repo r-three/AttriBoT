@@ -380,11 +380,9 @@ class GradientNormAttributor(AttributorBase):
         full_context = context_ops.flatten_context(context_tree)
         prompt = prompt_template.format(question=question, context=full_context)
         prompt_encoding, prompt_text = model_utils.tokenize(self.tokenizer, prompt, return_text=True)
-        # prompt_ids = prompt_encoding["input_ids"].to(self.model.device)
-        # response_ids = torch.tensor(response_ids).to(self.model.device)
-        prompt_ids = prompt_encoding["input_ids"].to('cpu')
-        response_ids = torch.tensor(response_ids).to('cpu')
-
+        prompt_ids = prompt_encoding["input_ids"].to(self.model.device)
+        response_ids = torch.tensor(response_ids).to(self.model.device)
+        
         input_ids = torch.cat((prompt_ids, response_ids), dim=1)
         labels = torch.cat((torch.full_like(prompt_ids, -100), response_ids), dim=1)
 
