@@ -1,5 +1,6 @@
 # AttriBoT: A **B**ag **o**f **T**ricks for Efficiently Approximating Leave-One-Out Context Attribution
 
+This repository contains the official code for the paper: ["AttriBoT: A Bag of Tricks for Efficiently Approximating Leave-One-Out Context Attribution"](https://arxiv.org/abs/2411.15102).
 
 ## Install
 
@@ -37,3 +38,18 @@ python example/example.py --input example/aurora.json --dtype float16 --use-cach
 ```
 
 The code has been tested with Llama 3, Qwen 2, Mistral families.
+
+### Citation
+
+If you find this repo helpful, welcome to cite our work:
+
+```
+@inproceedings{
+  liu2025attribot,
+  title={AttriBoT: A Bag of Tricks for Efficiently Approximating Leave-One-Out Context Attribution},
+  author={Fengyuan Liu and Nikhil Kandpal and Colin Raffel},
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025},
+  url={https://arxiv.org/abs/2411.15102}
+}
+```
